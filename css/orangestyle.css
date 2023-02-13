@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 161, 93);
+    font-family: 'Abril Fatface', cursive;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.alarm{
+    border: 3px solid red;
+    border-radius: 8px;
+
+}
+
+.datetime{
+    color: white;
+    background:rgb(255, 161, 93);
+    width: 25em;
+    padding: 15px 10px;
+    transition: 0.5s;
+    transition-property: background,box-shadow;
+   
+}
+
+
+.date{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span:not(:last-child){
+    position: relative;
+    max-width: 0 6px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.time span:last-child{
+    background: red;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+hr{
+    border: 1px solid red;
+    margin: 20px auto;
+}
+
+.setAlarm{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.column select{
+    font-family: 'Abril Fatface', cursive;
+    background: rgb(255, 161, 93);
+    color: white;
+    text-align: center;
+    padding: 8px 4px;
+    border: 1px solid red;
+    border-radius: 18px;
+}
+
+
+#btn-setAlarm, .btn-delete, #stopAlarm,#btn-delAlarm{
+    padding: 5px;
+    color: white;
+    background: red;
+    border: 1px solid red;
+    border-radius: 18px;
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.btnStyle{
+    padding: 5px;
+    color: white;
+    background: red;
+    border: 1px solid red;
+    border-radius: 18px;
+    text-align: center;
+
+    margin-bottom: 2%;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+#btn-center{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    
+}
+
+.btn{
+    font-family: 'Abril Fatface', cursive;
+    padding: 5px;
+    color: white;
+    background: red;
+    border: 1px solid red;
+   
+    text-align: center;
+
+}
+
+.btn:hover{
+    color:black;
+}
+
+#botonOrange{
+    color:black;
+}
+
+#Siguiente{
+    padding: 5px;
+    color: white;
+    background: red;
+    border: 1px solid red;
+    border-radius: 18px;
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+}
+
+#stopAlarm{
+    font-family: 'Abril Fatface', cursive;
+    visibility: hidden;
+    width: 100px;
+    margin: 0 36%;
+}
+
+
+.btn-delete{
+    margin-left: 50px;
+}
+
+button:hover{
+    cursor: pointer;
+    background: red;
+    box-shadow: 0 0 30px red;
+}
+
+h3{
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+ul {
+    color:white;
+    list-style: none;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+}
+
+.alarmLog{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px auto;
+}
+
+dialog {
+    max-width: 650px;
+    padding: 40px 70px;
+    border: 3px solid red;
+    border-radius: 8px;
+    background-color: rgb(255, 161, 93);
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  dialog::backdrop {
+
+    background: rgba(97, 64, 59, 0.9);
+  }
+
+  @keyframes alarma{
+   0%{
+    color: white;
+    background: rgb(255, 161, 93);
+    font-family: 'Abril Fatface', cursive;
+    width: 25em;
+    padding: 15px 10px;
+    transition: 0.5s;
+    transition-property: background,box-shadow;
+   }
+   100%{ 
+    background: white;
+    box-shadow: 0 0 30px white;
+    border-radius: 5px;}
+  }
+
+  @media screen and (max-width: 800px) {
+
+    .datetime{
+        color: white;
+        background: rgb(255, 161, 93);
+        width: 20em;
+        padding: 15px 10px;
+        transition: 0.5s;
+        transition-property: background,box-shadow;
+       
+    }
+
+    dialog {
+        max-width: 650px;
+        padding: 40px 70px;
+        border: 3px solid red;
+        border-radius: 8px;
+        background-color: rgb(255, 161, 93);
+        margin-top: 30%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+
+
+    <link id="estilos" rel="stylesheet" href="css/whitestyle.css">
+</head>
+<body>
+    <div class="btnStyle">
+        <div>
+            <button id="botonWhite" class="btn" type="button">Día</button>
+        </div>
+        <div>
+            <button id="botonBlack" class="btn" type="button">Noche</button>
+        </div>
+        <div>
+            <button id="botonPink" class="btn" type="button">Pinkie Pie</button>
+        </div>
+        <div>
+            <button id="botonOrange" class="btn" type="button">Applejack</button>
+        </div>
+
+    </div>
+    <div class="alarm">
+
+        
+
+        <div class="datetime">
+            <div class="date">
+                <span id="dayName">Day</span>,
+                <span id="month">Month</span>,
+                <span id="dayNum">00</span>,
+                <span id="year">Year</span>
+            </div>
+            <div class="time">
+                <span id="hour">00</span>:
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>
+                <span id="period">AM</span>
+            </div>
+            <button id="stopAlarm" onclick="stopAlarm()">Parar alarma</button>
+        </div>
+
+        <hr>
+        <dialog id="modal1">
+
+        <div class="setAlarm">
+
+            <div class="column">
+                <select>
+                    <option value="setHour" selected hidden>Hora</option>
+                </select>
+            </div>
+
+            <div class="column">
+                <select>
+                    <option value="setMinute" selected hidden>Minuto</option>
+                    
+                </select>
+            </div>
+
+            <div class="column">
+                <select>
+                    <option value="AM/PM" selected hidden>AM/PM</option>
+                </select>
+            </div>
+
+            <button id="btn-setAlarm" type="submit">Añadir</button>
+            <button id="btn-setAlarm" onclick="window.modal1.close();">Cerrar</button>
+            
+        </div>
+    </dialog>
+    <dialog id="modal2">
+
+        <div class="delAlarm">
+
+            <div class="column">
+                <select>
+                    <option value="setHour" selected hidden>Hora</option>
+                </select>
+            </div>
+
+            <div class="column">
+                <select>
+                    <option value="setMinute" selected hidden>Minuto</option>
+                    
+                </select>
+            </div>
+
+            <div class="column">
+                <select>
+                    <option value="AM/PM" selected hidden>AM/PM</option>
+                </select>
+            </div>
+
+            <button id="btn-delAlarm" type="submit">eliminar</button>
+            <button id="btn-delAlarm" onclick="window.modal2.close();">Cerrar</button>
+            
+        </div>
+    </dialog>
+
+    <div id="btn-center">
+        <div>
+            <button id="Siguiente" class="boton" onclick="window.modal1.showModal();" >Añadir alarma</button>
+        </div>
+        <div>
+            <button id="Siguiente" class="boton" onclick="window.modal2.showModal();" >Eleminar alarma</button>
+        </div>
+    </div>
+
+        <hr>
+
+        <h3 id="alarm-h3"></h3>
+
+        <div class="alarmList">
+                
+            
+        </div>
+        <ul id="alarma-list">
+        </ul>
+        
+    </div>
+   
+    <script src="js/app.js"></script>
+</body>
+</html>
